@@ -1,0 +1,123 @@
+### 
+GET  https://javascripteros-app.herokuapp.com/
+
+### REGISTRAR USUSARIO
+POST  https://javascripteros-app.herokuapp.com/api/users
+Content-Type: application/json
+
+{
+    "username":"diegoliu",
+    "email":"dgal@gmail.com",
+    "date":"2025-03-04",
+    "name":"diego",
+    "password":"ewfwwed",
+    "lastname":"galindo"
+}
+
+### LOG IN DE USUARIO
+POST  http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "email":"dgal@gmail.com",
+    "password":"ewfwwed"
+}
+
+//TOKEN
+//lP3JJqZwW-xQIYQQlXr
+
+### OBTENER INFO DE USUARIO
+GET  http://localhost:3000/api/users/dgal@gmail.com
+x-auth: NY12Br4qc-jP95uxaJF
+
+### EDITAR USUARIO
+PUT  http://localhost:3000/api/users/Rodolfo@gmail.com
+Content-Type: application/json
+x-auth: NY12Br4qc-jP95uxaJF
+
+{
+    "name":"Eldiego",
+    "lastname":"Gal indo",
+    "date":"2020-01-05"
+}
+
+### PUBLICAR IDEA
+POST  http://localhost:3000/api/users/ideas
+Content-Type: application/json
+x-auth: NY12Br4qc-jP95uxaJF
+
+{
+    "title":"Idea1",
+    "description":"descripcion perrona de idea",
+    "email":"Rodolfo@gmail.com"
+}
+
+### PUBLICAR DUDA
+POST  http://localhost:3000/api/users/doubts
+Content-Type: application/json
+x-auth: NY12Br4qc-jP95uxaJF
+
+{
+    "title":"Duda1",
+    "description":"1111111111111111111111111111111111111111111111",
+    "email":"Rodolfo@gmail.com"
+}
+
+### PUBLICAR PROYECTO
+POST  http://localhost:3000/api/users/projects
+Content-Type: application/json
+x-auth: NY12Br4qc-jP95uxaJF
+
+{
+    "title":"Project1",
+    "description":"1111111111111111111111111111111111111111111111",
+    "email":"Rodolfo@gmail.com"
+}
+
+### VER TODAS LAS IDEAS
+GET http://localhost:3000/api/ideas
+x-auth: NY12Br4qc-jP95uxaJF
+
+### VER TODAS LAS DUDAS
+GET http://localhost:3000/api/doubts
+x-auth: NY12Br4qc-jP95uxaJF
+
+### VER TODOS LOS PROYECTOS
+GET http://localhost:3000/api/projects
+x-auth: NY12Br4qc-jP95uxaJF
+
+### BORRAR UN PROYECTO
+DELETE http://localhost:3000/api/projects
+Content-Type: application/json
+x-auth: lP3JJqZwW-xQIYQQlXr
+
+{
+    "id":""
+}
+
+### BORRAR UNA DUDA
+DELETE http://localhost:3000/api/doubts
+Content-Type: application/json
+x-auth: lP3JJqZwW-xQIYQQlXr
+
+{
+    "id":""
+}
+
+### BORRAR UNA IDEA
+DELETE http://localhost:3000/api/ideas
+Content-Type: application/json
+x-auth: lP3JJqZwW-xQIYQQlXr
+
+{
+    "id":""
+}
+
+### AGREGAR UN COMENTARIO
+POST http://localhost:3000/api/comments
+Content-Type: application/json
+x-auth: lP3JJqZwW-xQIYQQlXr
+
+{
+    "commentText":"Comentario 111111111"
+}

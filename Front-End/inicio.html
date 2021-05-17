@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Inicio</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+  </head>
+  <style>
+    #x{
+        border-style: none;
+    }
+    .media{
+    border-color:gray;
+    border-style: solid;
+    }
+</style>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg 1-dark bg-secondary">
+        <div class="proyecto">
+            <h2>Proyecto DASW</h2>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="Linksnavbar">
+            <a class="text-light btn btn-dark" href="inicio.html">Home</a>
+            <a class="text-light btn btn-dark" href="proyectos.html">Proyectos</a>
+            <a class="text-light btn btn-dark" href="dudas.html">Dudas</a>
+            <a class="text-light btn btn-dark" href="ideas.html" >Ideas</a>
+            <a class="text-light btn btn-dark" href="login.html">Salir</a>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="d-flex justify-content-center">
+            <h1 class="display-4">-Perfil de usuario-</h1>
+        </div>
+        <br>
+
+        <div class="col-12 d-flex justify-content-center">
+            <div class="media col-5"id="x">
+              <div class="media-left">
+                <img id="uProfilePicture" class=" rounded-circle" src="https://randomuser.me/api/portraits/men/0.jpg" alt="imagen">
+              </div>
+              <div class="media-body">
+                <h3 id="uName" class="mt-0 mb-1">Nombre: X X X X X</h3>
+                <h5 id="uEmail">Correo: xxxxxxxx@xxxx</h5>
+                <h5 id="uDate">Fecha de nacimiento: x x x x x</h5>
+                <br>
+                <h6 id="projectsCount">Proyectos: x</h6>
+                <h6 id="ideasCount">Ideas: x</h6>
+                <h6 id="doubtsCount">Dudas: x</h6>
+              </div>
+              <div media-right>
+                <button class="btn btn-primary" href="#" data-toggle="modal" data-target="#ModalEdit">Editar usuario</button>
+              </div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="d-flex justify-content-center">
+            <h1 class="display-4">-Actividad de usuario-</h1>
+        </div>
+        <br>
+        <div id="lista" class="col-12 d-flex justify-content-center">
+            <div class="media col-4">
+              <div class="media-body">
+                <h4 class="mt-0 mb-1">Título: X X X X X</h4>
+                <h5>Descripción:</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi animi totam vitae nisi assumenda,
+                    error perspiciatis nobis voluptatum hic mollitia officia, illum cum sunt atque! Molestias quasi sequi tenetur sed. 
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat nobis repellendus reiciendis labore obcaecati placeat? Consequatur 
+                    illum reprehenderit sit libero maxime voluptatibus hic sint ex! Molestias fugiat inventore neque eaque?</p>
+                <p>Autor: x x x x x</p>
+                <div class="d-flex align-items-end">
+                    <div media-body>
+                        <h5>Votos a favor: x</h5>
+                        <h5>Votos en contra: x</h5>
+                    </div>
+                </div>
+              </div>
+              <div media-right >
+                  <h5>PROYECTO</h5>
+                  <button id="editParentBtn" class="btn btn-primary" href="#" data-toggle="modal" data-target="#Modalgeneral">Editar</button>
+                  <button id="deleteParentBtn" class="btn btn-primary" href="#" data-toggle="modal" data-target="#ModalEliminar">Eliminar</button>
+              </div>
+            </div>
+          </div>
+          <br>
+    </div>
+
+
+    <div class="modal fade" id="Modalgeneral" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar proyecto/Idea/Duda</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="container">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-8">
+                                    <label for="nomproy">Título:</label>
+                                    <input type="text" name="nomproy" id="titgeneral" class="form-control" required>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-12">
+                                    <label for="descproy">Descripción:</label>
+                                    <textarea class="form-control" id="descgeneral" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="modal-footer flex-column">
+                        <div class="w-100 d-flex">
+                            <div class="p-2">
+                                <button type="submit" class="btn btn-primary" id="btnAgeneral">Editar</button>
+                            </div>
+                            <div class="ml-auto p-2">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="ModalEliminar" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">¿Está seguro de eliminar dicho registro?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+
+                    <form action="">
+                        <div class="modal-footer flex-column">
+                            <div class="w-100 d-flex">
+                                <div class="p-2">
+                                    <button type="submit" class="btn btn-danger justify-content-end" id="btnEliminar">Eliminar</button>
+                                </div>
+                                <div class="ml-auto p-2">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="container">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-8">
+                                    <label for="Enom">Nombre:</label>
+                                    <input type="text" name="nom" id="Enom" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-8">
+                                    <label for="Eap">Apellido:</label>
+                                    <input type="text" name="nom" id="Eap" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-8">
+                                    <label for="fech">Fecha:</label>
+                                    <input type="date" name="fecha" id="Efech" class="form-control" placeholder="Fecha" required>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-8">
+                                    <label for="Eurl">Imagen de perfil:</label>
+                                    <input type="url" name="url" id="Eurl" class="form-control" placeholder="URL de imagen de perfil" required>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="modal-footer flex-column">
+                        <div class="w-100 d-flex">
+                            <div class="p-2">
+                                <button type="submit" class="btn btn-primary" id="btnEgeneral">Editar</button>
+                            </div>
+                            <div class="ml-auto p-2">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
